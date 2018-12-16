@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
 
 /**
  * 当BottomNavigationView的item的个数 >3时，item之间不会再占用相同控件，而是添加了一个动画。
- * 通过源码，用反射解决
+ * 通过源码，用反射解决.
  */
 public class BottomNavigationViewHelper {
 
