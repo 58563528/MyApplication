@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.myinterview.myfragment.activity.Main2Activity">
+
+    <!--
+    CoordinatorLayout布局，为加强型FrameLayout布局,FrameLayout布局中的控件在默认情况下都是摆放在界面的左上角。
+    这就会出现遮挡。就本布局来说，ToolBar和Fragment布局会出现遮挡现象(Toolbar遮挡TabLayout的Tab页)
+    为了解决遮挡问题，将ToolBar放在AppBarLayout布局中，同时给content_main布局指定一个布局行为：app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    遮挡问题解决。属Material Design范畴
+    -->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/common_toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <include layout="@layout/content_main" />
+
+</android.support.design.widget.CoordinatorLayout>

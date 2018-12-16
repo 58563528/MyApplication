@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_bottom_navigation"
+        android:title="@string/tab_1" />
+
+    <item
+        android:id="@+id/navigation_music"
+        android:icon="@drawable/ic_bottom_music"
+        android:title="@string/tab_2" />
+
+    <item
+        android:id="@+id/navigation_car"
+        android:icon="@drawable/ic_bottom_car"
+        android:title="@string/tab_3" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_bottom_setting"
+        android:title="@string/tab_4" />
+    <item
+        android:id="@+id/navigation_toys"
+        android:icon="@drawable/ic_bottom_toys"
+        android:title="@string/tab_5" />
+
+</menu>

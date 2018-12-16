@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/db_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider 数据操作  （db1 SQLite数据库支持）" />
+
+    <!-- 增加 -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/db_text"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/person_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insertData" />
+
+        <!-- 删除 -->
+
+        <Button
+            android:id="@+id/person_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteData" />
+
+        <!-- 修改 -->
+
+        <Button
+            android:id="@+id/person_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/updateData" />
+
+        <!-- 查询 -->
+
+        <Button
+            android:id="@+id/person_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/queryData" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/list_data2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout3" />
+
+
+    <TextView
+        android:id="@+id/change_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/main_textview"
+        android:textSize="30sp" />
+
+
+</RelativeLayout>
+

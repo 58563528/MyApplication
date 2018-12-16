@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="PhotoActivityTheme" parent="AppTheme_Fragment">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>
