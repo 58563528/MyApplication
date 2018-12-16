@@ -69,6 +69,8 @@ public class Main2Activity extends FragmentActivity {
             //正常启动
             initHomeFragment();
         } else {
+            //当内存被回收等恢复时，根据Tag找到已经add的Fragment
+            //未打开的为null 防止二次加载fragment
             //解决重叠问题
             navigateFragment = (NavigateFragment) fragmentManager.findFragmentByTag(getString(R.string.tab_1));
             musicFragment = (MusicFragment) fragmentManager.findFragmentByTag(getString(R.string.tab_2));
