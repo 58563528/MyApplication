@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import com.example.myinterview.R;
 
-import java.lang.ref.WeakReference;
-
 /**
  * Service - Activity 通信  实现ServiceConnection接口方式
  */
@@ -28,14 +26,10 @@ public class ServiceActivity2 extends AppCompatActivity implements View.OnClickL
     private int TransforData;
     MyService2.MyBinder binder = null;
 
-    private MyHandler handler;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service2);
-
-        handler = new MyHandler(this);
 
         TransforData = 0;
         textView = (TextView) findViewById(R.id.textView);
@@ -105,7 +99,6 @@ public class ServiceActivity2 extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    /*
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -113,24 +106,5 @@ public class ServiceActivity2 extends AppCompatActivity implements View.OnClickL
             //在此处更新UI
             textView.setText(msg.obj.toString());
         }
-    };*/
-    private static class MyHandler extends Handler {
-        WeakReference<ServiceActivity2> mWeakReference;
-
-        MyHandler(ServiceActivity2 activity) {
-            mWeakReference = new WeakReference<ServiceActivity2>(activity);
-        }
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            final ServiceActivity2 activity = mWeakReference.get();
-            if (activity != null) {
-                //在此处更新UI
-                activity.textView.setText(msg.obj.toString());
-            }
-        }
-    }
-
-
+    };
 }
