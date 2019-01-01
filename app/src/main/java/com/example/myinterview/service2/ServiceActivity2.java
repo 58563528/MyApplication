@@ -118,7 +118,7 @@ public class ServiceActivity2 extends AppCompatActivity implements View.OnClickL
         WeakReference<ServiceActivity2> mWeakReference;
 
         MyHandler(ServiceActivity2 activity) {
-            mWeakReference = new WeakReference<ServiceActivity2>(activity);
+            mWeakReference = new WeakReference<>(activity);
         }
 
         @Override
